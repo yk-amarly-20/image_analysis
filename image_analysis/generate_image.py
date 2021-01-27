@@ -13,7 +13,7 @@ def generate_black(width: int, height: int) -> np.ndarray:
     :rtype: np.ndarray
     """
 
-    black = np.zeros(shape=(width, height, 0))
+    black = np.zeros(shape=(width, height, 3))
     return black
 
 def generate_white(width: int, height: int) -> np.ndarray:
@@ -46,7 +46,7 @@ def generate_red(width: int, height: int) -> np.ndarray:
     """
 
     black = np.zeros(shape=(width, height, 3))
-    red = [255, 0, 0][::-1]
+    red = black + [255, 0, 0][::-1]
 
     return red
 
